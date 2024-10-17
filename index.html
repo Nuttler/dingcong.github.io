@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>个人简历</title>
+    <title>朱家乐个人简历</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         body {
@@ -72,7 +72,7 @@
 			  {
     				color: #ffffff;
     				text-decoration: none;
-    				font-size: 1.1em;
+    				font-size: 1em;
     				transition: color 0.3s;
 				}
 
@@ -80,20 +80,71 @@
 				{
     				color: #ff6f91;
 				}
+				#portfolio {
+    padding: 50px 20px;
+    text-align: left;
+    background-color: #1c1c1c;
+}
+
+#portfolio h2 {
+    font-size: 2.2em;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.portfolio-item {
+    flex: 1 1 200px;
+    max-width: 1000px;
+    text-align: center;
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: auto;
+    border: 2px solid #282828;
+    transition: transform 0.3s ease;
+}
+
+.portfolio-item img:hover {
+    transform: scale(1.05);
+}
+
+/* 模态框样式 */
+.modal {
+    display: none; /* 默认隐藏 */
+    position: fixed;
+    z-index: 100; /* 保证在最顶层 */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9); /* 半透明黑色背景 */
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    max-width: 80%;
+    max-height: 80%;
+    margin-top: 50px;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+}
     </style>
 </head>
 <body>
 
 <header>
     <h1>朱家乐</h1>
-    <p>全栈开发工程师 | 热爱编程与创新</p>
-        <nav>
-            <ul>
-                <li><a href="#portfolio">作品集</a></li>
-                <li><a href="#about">关于我</a></li>
-                <li><a href="#contact">联系我</a></li>
-            </ul>
-        </nav>
+    <p>动画专业 | 在校大学生</p>
 </header>
 
 <div class="container">
@@ -101,21 +152,29 @@
     <section id="about">
         <h2>关于我</h2>
         <img src="azu.webp" alt="个人头像" class="avatar"> <!-- 替换为你的头像路径 -->
-        <p>我是一名热爱技术的全栈开发工程师，拥有多年Web开发经验，擅长使用JavaScript、Python和相关框架构建高性能的应用程序。</p>
+        <p>我是作为动画专业的学生，我对动画的创作充满热情，尤其擅长[2D/3D动画]设计和制作。在校期间，我系统学习了动画原理、角色设计、分镜脚本等专业课程，并熟练使用[Maya、Blender、Adobe Animate]等动画制作软件。通过参与多项项目练习与团队协作，我积累了实战经验，具备了从概念设计到动画完成的全流程操作能力。我特别注重细节和动画流畅度，力求通过作品表达情感与故事。同时，我也不断学习行业最新的技术和工具，提升自己在[动画特效/角色动画/场景设计等]方面的能力。希望通过此次实习，进一步锻炼并运用所学技能，为团队贡献我的创意与努力。</p>
+    </section>
+    
+    <section>
+    	<h2>期望岗位</h2>
+    	<li><strong>动画专业</strong></li>
     </section>
 
     <section>
         <h2>教育背景</h2>
         <ul>
             <li><strong>动画专业</strong> - 成都东软学院 (2021 - 至今)</li>
+            <p>主修课程： 基础构成、 数字绘画、 动画运动规律、动画场景设计、动画角色设计、三维模型制作、衍生品制作、 分镜设计， IP 人物设计。</p>
         </ul>
     </section>
 
     <section>
         <h2>校园经历</h2>
         <ul>
-            <li><strong>ABC科技公司</strong> - 全栈开发工程师 (2020 - 至今)</li>
-            <li><strong>XYZ有限公司</strong> - 前端开发工程师 (2018 - 2020)</li>
+            <li><strong>学院团委&nbsp;&nbsp;&nbsp;部长</strong></li>
+            <li>在校期间任团委部长，负责院团委周报、微信公众号的维护和运营。</li>
+            <li>负责为学校活动进行宣传，包括拍摄、 剪辑， 视频后期制作等。</li>
+            <li>负责协调活动的前期准备，如场地预定，宣传推广，通知等， 海报制作与文字排版、制作 ppt等</li>
         </ul>
     </section>
     
@@ -138,18 +197,129 @@
         </ul>
     </section>
 
-    <section id="portfolio">
-        <h2>作品集</h2>
-        <div class="portfolio-item">
-            <img src="your_image1.jpg" alt="作品1">
-            <p>项目描述：这里简要描述你的动画项目。</p>
-        </div>
-        <div class="portfolio-item">
-            <img src="your_image2.jpg" alt="作品2">
-            <p>项目描述：这里简要描述你的动画项目。</p>
-        </div>
-        <!-- 添加更多作品 -->
-    </section>
+<section id="portfolio">
+    <h2>作品集</h2>
+    
+    <!-- 第一张图片 -->
+    <div class="portfolio-item">
+        <img src="work1.png" alt="作品1" onclick="openModal(this.src)">
+        <p>项目描述：这里简要描述你的动画项目。</p>
+    </div>
+    
+    <!-- 第二张图片 -->
+    <div class="portfolio-item">
+        <img src="work3.png" alt="作品2" onclick="openModal(this.src)">
+        <p>项目描述：这里简要描述你的动画项目。</p>
+    </div>
+    
+    <!-- 第二张图片 -->
+    <div class="portfolio-item">
+        <img src="work4.png" alt="作品2" onclick="openModal(this.src)">
+        <p>项目描述：这里简要描述你的动画项目。</p>
+    </div>
+    
+    <!-- 第二张图片 -->
+    <div class="portfolio-item">
+        <img src="work5.png" alt="作品2" onclick="openModal(this.src)">
+        <p>项目描述：这里简要描述你的动画项目。</p>
+    </div>
+    
+    <!-- 第二张图片 -->
+    <div class="portfolio-item">
+        <img src="work6.png" alt="作品2" onclick="openModal(this.src)">
+        <p>项目描述：这里简要描述你的动画项目。</p>
+    </div>
+    
+    <!-- 第二张图片 -->
+    <div class="portfolio-item">
+        <img src="work7.png" alt="作品2" onclick="openModal(this.src)">
+        <p>项目描述：这里简要描述你的动画项目。</p>
+    </div>
+    
+    <!-- 第二张图片 -->
+    <div class="portfolio-item">
+        <img src="work8.png" alt="作品2" onclick="openModal(this.src)">
+        <p>项目描述：这里简要描述你的动画项目。</p>
+    </div>
+    
+    <!-- 第二张图片 -->
+    <div class="portfolio-item">
+        <img src="work9.png" alt="作品2" onclick="openModal(this.src)">
+        <p>项目描述：这里简要描述你的动画项目。</p>
+    </div>
+    
+    <!-- 第二张图片 -->
+    <div class="portfolio-item">
+        <img src="work10.png" alt="作品2" onclick="openModal(this.src)">
+        <p>项目描述：这里简要描述你的动画项目。</p>
+    </div>
+    
+    <!-- 第二张图片 -->
+    <div class="portfolio-item">
+        <img src="work11.png" alt="作品2" onclick="openModal(this.src)">
+        <p>项目描述：这里简要描述你的动画项目。</p>
+    </div>
+    
+    <!-- 第二张图片 -->
+    <div class="portfolio-item">
+        <img src="work12.png" alt="作品2" onclick="openModal(this.src)">
+        <p>项目描述：这里简要描述你的动画项目。</p>
+    </div>
+    
+    <!-- 第二张图片 -->
+    <div class="portfolio-item">
+        <img src="work13.png" alt="作品2" onclick="openModal(this.src)">
+        <p>项目描述：这里简要描述你的动画项目。</p>
+    </div>
+    
+    <!-- 第二张图片 -->
+    <div class="portfolio-item">
+        <img src="work14.png" alt="作品2" onclick="openModal(this.src)">
+        <p>项目描述：这里简要描述你的动画项目。</p>
+    </div>
+    
+    <!-- 第二张图片 -->
+    <div class="portfolio-item">
+        <img src="work15.png" alt="作品2" onclick="openModal(this.src)">
+        <p>项目描述：这里简要描述你的动画项目。</p>
+    </div>
+    
+    <!-- 第二张图片 -->
+    <div class="portfolio-item">
+        <img src="work16.png" alt="作品2" onclick="openModal(this.src)">
+        <p>项目描述：这里简要描述你的动画项目。</p>
+    </div>
+    
+    <!-- 第二张图片 -->
+    <div class="portfolio-item">
+        <img src="work17.png" alt="作品2" onclick="openModal(this.src)">
+        <p></p>
+    </div>
+    
+
+    <!-- 模态框 -->
+    <div id="imageModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+    
+    <!-- JavaScript 代码 -->
+<script>
+    // 打开模态框，展示大图
+    function openModal(src) {
+        var modal = document.getElementById("imageModal");
+        var modalImg = document.getElementById("modalImage");
+        modal.style.display = "flex";
+        modalImg.src = src; // 设置模态框中的图片为点击的图片
+    }
+
+    // 关闭模态框
+    function closeModal() {
+        var modal = document.getElementById("imageModal");
+        modal.style.display = "none";
+    }
+</script>
+</section>
 
 </div>
 
