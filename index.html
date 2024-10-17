@@ -58,6 +58,28 @@
             padding: 20px;
             background-color: #282828;
         }
+        nav ul 
+        {
+    				list-style-type: none;
+    				padding: 0;
+    				margin: 20px 0 0 0;
+				}
+				nav ul li {
+    				display: inline-block;
+    				margin: 0 15px;
+				}
+				nav ul li a
+			  {
+    				color: #ffffff;
+    				text-decoration: none;
+    				font-size: 1.1em;
+    				transition: color 0.3s;
+				}
+
+				nav ul li a:hover 
+				{
+    				color: #ff6f91;
+				}
     </style>
 </head>
 <body>
@@ -65,16 +87,38 @@
 <header>
     <h1>朱家乐</h1>
     <p>全栈开发工程师 | 热爱编程与创新</p>
+        <nav>
+            <ul>
+                <li><a href="#portfolio">作品集</a></li>
+                <li><a href="#about">关于我</a></li>
+                <li><a href="#contact">联系我</a></li>
+            </ul>
+        </nav>
 </header>
 
 <div class="container">
 
-    <section>
+    <section id="about">
         <h2>关于我</h2>
         <img src="azu.webp" alt="个人头像" class="avatar"> <!-- 替换为你的头像路径 -->
         <p>我是一名热爱技术的全栈开发工程师，拥有多年Web开发经验，擅长使用JavaScript、Python和相关框架构建高性能的应用程序。</p>
     </section>
 
+    <section>
+        <h2>教育背景</h2>
+        <ul>
+            <li><strong>动画专业</strong> - 成都东软学院 (2021 - 至今)</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>校园经历</h2>
+        <ul>
+            <li><strong>ABC科技公司</strong> - 全栈开发工程师 (2020 - 至今)</li>
+            <li><strong>XYZ有限公司</strong> - 前端开发工程师 (2018 - 2020)</li>
+        </ul>
+    </section>
+    
     <section>
         <h2>技能</h2>
         <ul>
@@ -85,42 +129,32 @@
         </ul>
     </section>
 
-    <section>
-        <h2>工作经历</h2>
-        <ul>
-            <li><strong>ABC科技公司</strong> - 全栈开发工程师 (2020 - 至今)</li>
-            <li><strong>XYZ有限公司</strong> - 前端开发工程师 (2018 - 2020)</li>
-        </ul>
-    </section>
-
-    <section>
-        <h2>教育背景</h2>
-        <ul>
-            <li><strong>计算机科学学士</strong> - 北京大学 (2014 - 2018)</li>
-        </ul>
-    </section>
-
-    <section>
+    <section id="contact">
         <h2>联系方式</h2>
         <ul>
-            <li>邮箱: zhangsan@example.com</li>
-            <li>电话: +86 123 4567 8901</li>
+            <li>邮箱: 1690613245@qq.com</li>
+            <li>电话: +86 150 8286 2313</li>
+            <li>地址：四川省成都市</li>
         </ul>
     </section>
 
-    <section>
-        <h2>社交媒体</h2>
-        <div class="social-icons">
-            <a href="#" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
-            <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+    <section id="portfolio">
+        <h2>作品集</h2>
+        <div class="portfolio-item">
+            <img src="your_image1.jpg" alt="作品1">
+            <p>项目描述：这里简要描述你的动画项目。</p>
         </div>
+        <div class="portfolio-item">
+            <img src="your_image2.jpg" alt="作品2">
+            <p>项目描述：这里简要描述你的动画项目。</p>
+        </div>
+        <!-- 添加更多作品 -->
     </section>
 
 </div>
 
 <footer>
-    <p>&copy; 2023 朱家乐 | 版权所有</p>
+    <p>&copy; 2024 朱家乐</p>
 </footer>
 
 </body>
